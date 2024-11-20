@@ -1,0 +1,48 @@
+article p{
+    backround: blue;
+    color: white;
+    padding: 20px;
+}
+
+article > p{
+    background: rgb(136, 255, 0);
+}
+
+article ~ p{
+    background: purple;
+    color: white;
+    padding: 20px;
+}
+
+article + p {
+    background: lightskyblue;
+}
+
+h3:first-child{
+    backround-color: lightskyblue;
+    color:white;
+}
+
+span:first-child{
+    background: black;
+    color:white;
+    }
+
+    form{
+        margin-top: 20px;
+    }
+
+input:invalid{
+    border: 2px solid black;
+}
+input:valid{
+    border: 20px solid blue;
+}
+p::first-line{
+    color:limegreen;
+    font-size: 40px;
+}
+
+div{
+    opacity: 0,5;
+}
