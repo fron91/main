@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+#section-1{
+    background-color: #87509c;
+    height: 600px;
+}
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+}
