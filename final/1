@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+    
+ </body>
+ </html>
+ 
+ 
+ 
+ <div class="about-us-container">
+                              <h2>About Us</h2>
+                              <button class="about-btn">Learn More</button>
+                              <div class="about-content">
+                                  <p>We are a company focused on providing excellent service in the tech industry. Our goal is to innovate and make a positive impact on the world.</p>
+                                  <p>Founded in 2020, our team is composed of passionate individuals who work tirelessly to bring our vision to life. We believe in collaboration, creativity, and making a difference.</p>
+                              </div>
+                          </div>
