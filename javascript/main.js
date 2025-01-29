@@ -48,6 +48,22 @@ var v=5;
 var w=5;
 console.log(v == w);
 
-var z
+var z=6;
+var zh=8;
+console.log(z===zh);
 
+var firstname="digital";
+var lastname="school";
+var fullname= firstname+""+lastname;
+console.log(fullname);
+
+var school="Digital School";
+console.log(`Hello from ${school}`);
+
+var age=24;
+console.log(age >=18 && age<=65);
+
+var var1=5;
+var var2=6;
+console.log(var1 ==5 || var2 ==5);
 
