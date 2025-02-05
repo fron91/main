@@ -107,6 +107,10 @@ body{
 }
 
 
+.cars-html{
+    background-color: #444;
+}
+
 
 .contact-btn {
     background-color: #ff5722; 
@@ -126,3 +130,13 @@ body{
   .car:hover {
     background-color: #45a049;
   }
+  
+  @media (max-width: 76x) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-content, .home-image {
+        max-width: 100%;
+    }
+}
