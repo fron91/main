@@ -3,59 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rent a Car</title>
-    <link rel="stylesheet" href="cars.html">
-    <link rel="stylesheet" href="about.html">
+    <title>Paradics Cars - Rent a Car</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact.html">
-    <link rel="stylesheet" href="about.html">
-
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Paradics cars</a>
-        <a href="cars.html" class="cars-button">View Cars for Rent</a>
-        
-
-        <ul class="navbar">
-            <li class="active"><a href="#">HOME</a></li>
-            <li><a href="about.html" class="about-button">About Us</a>li>
-            <li><a href="contact.html" class="contact-button">Contact Us</a>li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Reviws</a></li>
-            <li><a href="#">Blogs</a></li>
-        </ul>
-        <a href="#" class="book">Book a Ride</a>
-    </header>
-
-    <section class="home">
-        <div class="text">
-         <h1>Looking for a car</h1>
-         <p>We have  amazing cars for rent we have family cars and other.</p>
-         <div class="store">
-          <img src="store.png" alt="">
-     </div>
-     </div>
-     <div class="Image">
-        <img src="jeep.png" alt="">
-        <nav>
+        <a href="#" class="logo">Paradics Cars</a>
+        <nav class="navbar">
             <ul>
-                
+                <li class="active"><a href="#home">HOME</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#" class="book button">Book a Ride</a></li>
             </ul>
         </nav>
-        
-    </body>
-    </html>
+    </header>
 
-        
-        
-         
-          
+    <main>
+        <section id="home" class="home">
+            <div class="text">
+                <h1>Looking To Rent A Car?</h1>
+                <p>
+                    We have a large selection of vehicles from a variety of manufacturers, including family cars, trucks, and SUVs.
+                    Our prices are competitive, and we offer a variety of rental options to meet your needs. We have amazing cars for rent!
+                </p>
+                <a href="#cars-section" class="cars-button">Check Cars</a>
+            </div>
+            <div class="image">
+                <img src="jeep.png" alt="Red Jeep available for rent">
+            </div>
+        </section>
 
-      
-     </div>
-    </section>
-    
+        <section id="cars-section">
+            <h2>Available Cars</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <h3>BMW M5</h3>
+                    <div class="image">
+                        <img src="m5.png" alt="BMW M5">
+                    </div>
+                    <p>High-performance luxury BMW, perfect for a stylish ride.</p>
+                    <button class="rent-now-btn">Rent Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>XM</h3>
+                    <p>XM kerr familjar i madh</p>
+                    <button class="rent-now-btn">Rent Now</button>
+                            <div class="image">
+                        <img src="xm.jpg" alt="XM:BMW">
+                    </div>
+                </div>
+                 <div class="car-item">
+                    <h3>Mercedes-Benz</h3>
+                    <p>Description of Car 3. Spacious and comfortable for the whole family.</p>
+                    <button class="rent-now-btn">Rent Now</button>
+                            <div class="image">
+                        <img src="benz.png" alt="Mercedes-Benz">
+                    </div>
+                </div>
+                
+                <!-- Added 3 More Car Item Placeholders Below -->
+                <div class="car-item">
+                    <img src="car4_placeholder.png" alt="Car Model 4">
+                    <h3>RS7</h3>
+                    <p>Description of Car Model 4. Features, benefits, etc.</p>
+                    <button class="rent-now-btn">Rent Now</button>
+                            <div class="image">
+                        <img src="RS7.PNG" alt="AUDI:RS7">
+                    </div>
+                </div>
+                <div class="car-item">
+                    <img src="car5_placeholder.png" alt="CADILLAC">
+                    <h3>CADILLAC</h3>
+                    <p>kerr i madh familjar.</p>
+                    <button class="rent-now-btn">Rent Now</button>
+                            <div class="image">
+                        <img src="CADILLAC.PNG" alt="cadilac">
+                    </div>
+                </div>
+                <div class="car-item">
+                    <img src="car6_placeholder.png" alt="Car Model 6">
+                    <h3>Toyota Supra</h3>
+                    <p>Automobil sport.</p>
+                    <button class="rent-now-btn">Rent Now</button>
+                            <div class="image">
+                        <img src="c7.png" alt="Toyota">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Short-term & Long-term Rentals</li>
+                <li>Wide Range of Vehicle Choices</li>
+                <li>24/7 Roadside Assistance</li>
+                <li>Airport Pickup & Drop-off</li>
+                <li>Corporate Rental Plans</li>
+            </ul>
+        </section>
+
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <p>Our customers love us! (Content coming soon)</p>
+        </section>
+
+        <section id="blogs">
+            <h2>Our Blog</h2>
+            <p>Latest news and tips from Paradics Cars. (Content coming soon)</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Paradics Cars. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.book.button').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                alert('Thank you for your booking interest! We will contact you shortly.');
+            });
+        });
+
+         document.querySelectorAll('.rent-now-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('We will contact you shortly to discuss renting this car.');
+            });
+        });
+
+        document.querySelectorAll('.navbar a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== "#") {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-    

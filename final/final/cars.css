@@ -1,0 +1,15 @@
+ 
+ .navbar{
+    display: flex;
+ }
+ .navbar li{
+ position: relative;
+ }
+
+ .navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #444;
+    font-weight: 500;
+    }
+    
