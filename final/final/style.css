@@ -190,6 +190,305 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
+        /* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #007bff; /* A nice blue, often used for branding */
+    --secondary-color: #ff4500; /* OrangeRed, good accent for calls to action */
+    --dark-bg: #1a1a1a;        /* Dark background for body or sections */
+    --light-bg: #f8f9fa;       /* Light background for contrast */
+    --card-bg: #2c2c2c;        /* Background for car cards */
+    --text-light: #e0e0e0;     /* Light text for dark backgrounds */
+    --text-dark: #333;         /* Dark text for light backgrounds */
+    --font-primary: 'Roboto', sans-serif;
+    --font-headings: 'Exo 2', sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-headings);
+    margin-top: 0;
+    margin-bottom: 0.75em;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Header --- */
+header {
+    background-color: #111; /* Even darker for header */
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo-accent {
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a.active { /* Add .active class to current page link via JS/backend */
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x600/555555/FFFFFF?text=Awesome+Car+Background') no-repeat center center/cover;
+    /* Replace with a real car background image */
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* --- Main Content --- */
+main.container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* --- Featured Cars / Car Grid --- */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Ensures image corners are rounded if image itself isn't */
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3); /* Glow with primary color */
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.car-info {
+    padding: 20px;
+    flex-grow: 1; /* Makes this section take remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.car-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+}
+
+.car-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.car-specs {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.car-specs li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+}
+.car-specs li::before {
+    content: '✓'; /* Or use a car-related icon font */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.details-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: auto; /* Pushes button to the bottom of the card info */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+/* --- About Us Section --- */
+.about-us {
+    background-color: var(--card-bg); /* Or use a lighter background for contrast */
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-top: 50px;
+    text-align: center;
+}
+
+.about-us p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ccc;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #aaa;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap; 
+    }
+    nav ul li {
+        margin: 5px 10px;
+    }
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .car-grid {
+        grid-template-columns: 1fr; 
+    }
+}
 
     .contact-btn {
         background-color: #ff5722;
